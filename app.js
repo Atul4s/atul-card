@@ -1,56 +1,5 @@
-gsap.from(".icons i",{
-    y:50,
-    duration:1,
-    Delay:1,
-    opacity:0,
-    stagger:.5,
- 
-    
-})
-
-gsap.from(".video-container",{
-    y:150,
-    duration:1,
-    opacity:0,
-  
-    
-
-
-})
-
-
-
-
-gsap.from(".profile-pic",{
-    y:100,
-    duration:1,
-    Delay:1,
-    opacity:0,
-  
-    
-
-})
-
-
-gsap.from(".container img", {
-    duration: 2, 
-
-    x:150,
-    stagger:1
-})
-
-
-gsap.from(".mywork h1", {
-    y:50,
-    duration:3,
-    Delay:3,
-    opacity:0,
-    stagger:1,
-    rotation: -360
-})
 
 var btn = document.querySelector(".follow-button")
-
 
 
 function sendMail() {
@@ -63,3 +12,51 @@ function sendMail() {
 btn.addEventListener("click",function(){
     sendMail()
 })
+
+
+
+let box = document.querySelector(".box")
+
+let box2 = document.querySelector(".box-two")
+
+
+
+
+
+
+
+setInterval(function(){
+    let tp = Math.floor(Math.random()*30)
+    box.classList.add("animate");
+    box.style.top = `${tp}rem`;
+    box.style.animation = "3s slide-in";
+    box.style.display = "flex";
+    box2.style.display = "none";
+},8000,)
+
+
+setInterval(function(){
+    let tp = Math.floor(Math.random()*30)
+    box.style.display = "none";
+    box2.classList.add("animate");
+    box2.style.animation = "3s slide-in-2";
+    box2.style.display = "flex";
+    box2.style.top = `${tp}rem`;
+  },16000,)
+
+
+
+//   setInterval(function(){
+//     box2.classList.add("animate");
+//     box2.style.animation = "3s slide-in-2";
+//     box2.style.display = "flex";
+    
+// },18000,)
+
+
+
+
+// setInterval(function(){
+//     box2.style.display = "none";
+//   },15000,)
+

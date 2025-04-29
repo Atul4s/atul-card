@@ -17,17 +17,99 @@
 }
 
 
+/* @keyframes slide-in {
+    from {
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  } */
+
+  
+
+
+  .box {
+    /* animation: slide-in 2s; */
+    position: absolute;
+    display: none;
+    /* top: 15rem; */
+    left: 0rem;
+  
+   
+  }
 
 
 
-/* MOBILE */
+  .box img{
+    height: 100px;
+    /* opacity: .8; */
+  }
+
+
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+
+
+  .box-two {
+    /* animation: slide-in 2s; */
+    position: absolute;
+    /* top: 0rem; */
+    right: 0rem;
+    display: none;
+  
+  }
+
+
+  .box-two img{
+    height: 150px;
+    /* opacity: .8; */
+  }
+
+
+
+  @keyframes slide-in-2 {
+    from {
+      transform: translateY(500%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
 
    .mywork{
     position: relative;
     top: -5.4rem;
     left: -11rem;
+
+    animation: myworkk 3s linear;
    }
    
+   @keyframes myworkk {
+    0%{
+       transform: rotate(0deg);
+      }
+   100%{
+       transform: rotate(360deg);
+      }
+   }
+
+
+
     .mywork h1{
     background-color:#f3fcff;
     position: sticky;
@@ -70,13 +152,24 @@
         /* overflow: hidden; */
         transition: transform 0.3s ease;
         box-shadow: #7e87b4 0px 0px 50px; 
-      
-       
+        animation: 4s fadeInUp;
+        margin-top: 1rem;
     
     }
     
+
+    @keyframes fadeInUp {
+        0% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0%);
+          opacity: 1;
+        }
+      }
     
-    
+      
     
     .profile-pic{
         display: flex;
@@ -324,7 +417,7 @@
         
 
 
-
+          
       
      
    
