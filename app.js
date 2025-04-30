@@ -1,5 +1,5 @@
 
-var btn = document.querySelector(".follow-button")
+let btn = document.querySelector(".follow-button")
 
 
 function sendMail() {
@@ -19,9 +19,14 @@ let box = document.querySelector(".box")
 
 let box2 = document.querySelector(".box-two")
 
+box.addEventListener("touchstart",function(){
+     box.style.display = "none"
+   
+})
 
-
-
+box2.addEventListener("touchstart",function(){
+    box2.style.display = "none"
+})
 
 
 
@@ -32,7 +37,7 @@ setInterval(function(){
     box.style.animation = "3s slide-in";
     box.style.display = "flex";
     box2.style.display = "none";
-},8000,)
+},7000,)
 
 
 setInterval(function(){
@@ -42,21 +47,14 @@ setInterval(function(){
     box2.style.animation = "3s slide-in-2";
     box2.style.display = "flex";
     box2.style.top = `${tp}rem`;
-  },16000,)
+  },14000,)
 
 
 
-//   setInterval(function(){
-//     box2.classList.add("animate");
-//     box2.style.animation = "3s slide-in-2";
-//     box2.style.display = "flex";
-    
-// },18000,)
+  const mediaQuery = window.matchMedia('(min-width: 800px)');
 
-
-
-
-// setInterval(function(){
-//     box2.style.display = "none";
-//   },15000,)
-
+  if (mediaQuery.matches) {
+    console.log('Viewport is <= 600px');
+  } else {
+    console.log('Viewport is > 600px');
+  }
